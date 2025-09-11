@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Tracker Pro</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head><link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<body>
+    <div class="container">
+        <h1>🥗 Diet Tracker Pro</h1>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3 id="totalCalories">0</h3>
+                <p>Total Calories</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="totalProtein">0g</h3>
+                <p>Protein</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="totalCarbs">0g</h3>
+                <p>Carbohydrates</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="totalFat">0g</h3>
+                <p>Fat</p>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <h2 style="margin-bottom: 20px; color: #4a5568;">Add Food Item</h2>
+            <div class="form-group">
+                <input type="text" id="foodName" placeholder="Food name (e.g., Chicken Breast)" required>
+                <input type="number" id="calories" placeholder="Calories" min="0" required>
+                <input type="number" id="protein" placeholder="Protein (g)" min="0" step="0.1">
+                <input type="number" id="carbs" placeholder="Carbs (g)" min="0" step="0.1">
+                <input type="number" id="fat" placeholder="Fat (g)" min="0" step="0.1">
+                <select id="mealType">
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                    <option value="snack">Snack</option>
+                </select>
+            </div>
+            <button class="btn" onclick="addFood()">Add Food Item</button>
+        </div>
+
+        <div class="food-log">
+            <h2>📋 Today's Food Log</h2>
+            <div id="foodList">
+                <div class="empty-state">
+                    <p>No food items added yet. Start tracking your meals!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
